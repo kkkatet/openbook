@@ -1,0 +1,102 @@
+.books-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+  }
+  .carousel-items {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    gap: 30px;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    border: 1px solid rgb(223, 223, 223);
+    flex: 0 0 280px;
+    min-width: 0;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 10px;
+    background: rgb(244, 244, 244);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carousel-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.carousel-item img {
+    width: 100%;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.carousel-item p {
+    line-height: 10%;
+    font-size: 20px;
+    color: #3d3d3d;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    line-height: 0;
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.carousel-item .add-to-cart-btn {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-item .add-to-cart-btn:hover {
+    background-color: #0056b3;
+}

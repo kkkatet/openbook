@@ -1,0 +1,52 @@
+.header {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 100000;
+  background: white;
+  border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+.header nav {
+  display: flex;
+  gap: 40px;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+  transition: 200ms ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.header a svg {
+  font-size: 20px;
+}
+
+.header .title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header .title svg {
+  font-size: 24px;
+}
+
+.header a:hover,
+.header a.active {
+  color: rgb(83, 124, 227);
+}
+
+h4 a {
+  text-decoration: none;
+  color: #333;
+}

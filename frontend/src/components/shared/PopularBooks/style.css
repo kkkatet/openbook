@@ -1,0 +1,63 @@
+h2 {
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.popularBooks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px;
+}
+.book-card {
+    text-decoration: none;
+    background: rgb(244, 244, 244);
+    border: 1px solid rgb(223, 223, 223);
+    padding: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.book-card p {
+    font-size: 14px;
+    color: rgb(104, 103, 103);
+}
+
+.book-card:hover {
+    transform: scale(1.02);
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.popularImage {
+    max-height: unset;
+    max-width: unset;
+    border-radius: 5px;
+        width: 100%;
+        height: auto; /* чтобы сохранить пропорции */
+        display: block; /* убирает лишние отступы у картинки */
+      
+}
+@media (max-width: 710px) {
+    .popularImage {
+        height: 200px;
+        width: 140px;
+    }
+}
+.popularTitle, .popularAuthor, .popularPrice{
+    margin: 5px;
+    text-align: center;
+    color: #333;
+}

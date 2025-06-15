@@ -1,0 +1,8 @@
+.footer {
+    border-top:  1px solid rgb(184, 184, 184);
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+    color: #333;
+  }

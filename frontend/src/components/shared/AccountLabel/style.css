@@ -1,0 +1,70 @@
+.account-label-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.account-authenticated {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.account-email {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.account-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.login-button {
+  background-color: rgb(83, 124, 227);
+  color: #fff;
+}
+
+.login-button:hover {
+  background-color: transparent;
+  color: #333;
+  outline: 1px solid #333;
+}
+
+.logout-button {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.logout-button:hover {
+  background-color: transparent;
+  color: #d32f2f;
+  border-color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .account-authenticated {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .account-email {
+    font-size: 12px;
+  }
+
+  .account-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
