@@ -14,6 +14,8 @@ import AuthPage from './components/pages/auth'
 import { useSelector } from 'react-redux'
 import { Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
+import AddBook from './components/pages/add-book'
+import BookRequests from './components/pages/admin/BookRequests.jsx'
 import { checkAuth } from './state/actions'
 function App() {
   const dispatch = useDispatch()
@@ -28,7 +30,13 @@ function App() {
     dispatch(addToCart(book))
   }
 
-  const PrivateRoute = ({ children }) => {
+ const AdminRoute = ({ children }) => {
+    const { token, user } = useSelector(state => state.auth);
+    return token && user?.role === 'admin' ? children : <Navigate to='/' replace />;
+  };
+
+
+ const PrivateRoute = ({ children }) => {
     const token = useSelector(state => state.auth.token)
     return token ? children : <Navigate to='/auth' replace />
   }
@@ -67,6 +75,18 @@ function App() {
           }
         />
         <Route path='/auth' element={<AuthPage />} />
+        <Route
+          path='/add-book'
+          element={
+            <PrivateRoute>
+              <AddBook />
+            </PrivateRoute>
+          }
+        />
+        {/* Admin Route for Book Requests */}
+        <Route path="/admin/book-requests" element={<AdminRoute><BookRequests /></AdminRoute>} />
+
+
       </Routes>
       <Footer />
     </Router>
